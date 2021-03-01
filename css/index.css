@@ -1,0 +1,599 @@
+/* Layout Unit */
+/* Colors */
+/* Shadows */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+/* Typescale */
+/* Animation */
+/* Base Layout & Style */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  color: inherit;
+}
+
+html, body {
+  background: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  line-height: 2;
+  color: #0A2E40;
+}
+
+#root {
+  text-align: left;
+}
+
+/* Section Structure */
+header {
+  /*Define Vertical Padding and container style*/
+}
+
+section {
+  width: 100%;
+  padding: 50px 0;
+}
+
+footer {
+  width: 100%;
+  padding: 50px 0;
+}
+
+figure {
+  /*Define Vertical Padding and container style*/
+}
+
+.margins {
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.columns.one .column {
+  width: 100%;
+}
+.columns.two .column {
+  width: 100%;
+}
+.columns.three .column {
+  width: 100%;
+}
+.columns.four .column {
+  width: 100%;
+}
+
+/* Basic Type & Elements */
+h1, h2, h3, h4, h5, h6, a, p, span, button, ul, li {
+  font-family: "Roboto", helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 42px;
+  padding-left: 24px;
+  max-width: 550px;
+}
+
+h2 {
+  font-size: 22px;
+  text-align: center;
+  margin: 4px 0 64px;
+}
+h2 span {
+  background: url(../img/graphic-brush-large.png) center bottom no-repeat;
+  padding-bottom: 22px;
+  background-size: contain;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+
+/* Special Patterns */
+.button {
+  background-color: #ffffff;
+  color: #366177;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 20px 36px 20px 36px;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  transition: 0.1s all ease-in-out;
+}
+.button:hover {
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  color: #0A2E40;
+}
+.button.selected:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+}
+
+.tagline {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #0A2E40;
+  text-align: center;
+  letter-spacing: 1.25px;
+}
+
+/* Section-specific */
+.hero {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url(../img/bg-hero.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  padding: 24px 0 0;
+}
+.hero .margins header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.hero .margins header .eml-logo {
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+  text-decoration: none;
+}
+.hero .margins header .eml-logo img {
+  width: 14px;
+  height: 18px;
+  margin-right: 16px;
+}
+.hero .margins header .eml-logo div span {
+  display: block;
+  line-height: 20px;
+}
+.hero .margins header .eml-logo div .product-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+.hero .margins header .eml-logo div .product-tagline {
+  font-size: 14px;
+}
+.hero .margins header nav ul li a {
+  display: block;
+  line-height: 20px;
+  padding-left: 28px;
+  padding-bottom: 6px;
+  text-decoration: none;
+  background: url(../img/icon-mail.svg) left 1px no-repeat;
+  border-bottom: 2px solid transparent;
+  transition: 0.15s border-bottom-color ease-in-out;
+}
+.hero .margins header nav ul li a:hover {
+  border-bottom: 2px solid #4ADEF2;
+}
+.hero .margins hgroup {
+  max-width: 550px;
+}
+.hero .margins hgroup .just1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.hero .margins hgroup .just1 img {
+  display: block;
+  width: 199px;
+  height: 138px;
+}
+.hero .margins hgroup .just1 h2 {
+  font-size: 28px;
+  font-weight: normal;
+  margin: 0 0 24px;
+  align-self: center;
+  text-align: left;
+}
+
+.preorder {
+  text-align: center;
+  background-color: #4ADEF2;
+  background-image: url(../img/pattern-left.svg), url(../img/pattern-right.svg);
+  background-position: -80% center, 180% center;
+  background-repeat: no-repeat, no-repeat;
+  padding: 32px 0;
+}
+.preorder .margins h3 {
+  margin: 24px 0 0;
+}
+.gsuite {
+  padding-bottom: 0;
+}
+.gsuite h2 span {
+  background-image: url(../img/graphic-brush-large.png);
+  padding-bottom: 26px;
+}
+.gsuite .carousel-toggle {
+  display: flex;
+  display: none;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.gsuite .carousel-toggle .button {
+  width: 31.5%;
+  font-weight: normal;
+  line-height: 1.3;
+  text-align: left;
+  padding-left: 80px;
+  background: url(../img/icon-sheets.png) 24px center no-repeat;
+  background-size: 40px 40px;
+}
+.gsuite .carousel-toggle .button.button-sheets {
+  background-image: url(../img/icon-sheets.png);
+}
+.gsuite .carousel-toggle .button.button-gmail {
+  background-image: url(../img/icon-gmail.png);
+}
+.gsuite .carousel-toggle .button.button-drive {
+  background-image: url(../img/icon-drive.png);
+}
+.gsuite .carousel-toggle .button.selected {
+  background-color: #0A2E40;
+  color: white;
+  cursor: auto;
+}
+.gsuite .carousel {
+  position: relative;
+  padding: 0;
+  background-image: none;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+  border-bottom: 1px solid #DAE2E5;
+  background-color: #ffffff;
+}
+.gsuite .carousel .carousel-slide {
+  width: 100%;
+  flex-shrink: 0;
+  transition: 0.3s transform ease-in-out, 0.45s opacity ease-in-out, 0.3s background-color ease-in-out;
+  opacity: 1;
+  background-image: linear-gradient(180deg, #E7EBEC 0%, #DFE4E5 50%, #ffffff 50.00001%, #ffffff 100%);
+}
+.gsuite .carousel .carousel-slide .carousel-image {
+  width: 100%;
+  pointer-events: none;
+}
+.gsuite .carousel .carousel-slide .carousel-image div {
+  margin: 0 auto;
+  width: 100vw;
+  height: 52vw;
+  background-image: url(../img/carousel-images.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 300vw;
+}
+.gsuite .carousel .carousel-slide .carousel-image div.image-sheets {
+  background-position: 0% center;
+}
+.gsuite .carousel .carousel-slide .carousel-image div.image-gmail {
+  background-position: 50% center;
+}
+.gsuite .carousel .carousel-slide .carousel-image div.image-drive {
+  background-position: 100% center;
+}
+.gsuite .carousel .carousel-slide .carousel-caption {
+  width: 100%;
+  line-height: 1.6;
+  padding: 0 16px 32px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #0A2E40;
+  pointer-events: none;
+}
+.gsuite .carousel .carousel-slide .carousel-caption.caption-icon {
+  padding-bottom: 0;
+}
+.gsuite .carousel .carousel-slide .carousel-caption.caption-icon img {
+  display: block;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+}
+
+.setup {
+  padding-bottom: 0;
+  border-bottom: 1px solid #DAE2E5;
+  background-image: linear-gradient(0deg, #E9E9E9 0%, #FFFFFF 40%);
+}
+.setup h2 span {
+  background-image: url(../img/graphic-brush-large.png);
+  padding-bottom: 34px;
+}
+.setup h3 {
+  font-size: 36px;
+  margin-top: 0px;
+  color: #DAE2E5;
+  font-weight: normal;
+}
+.setup p {
+  line-height: 2;
+  font-size: 14px;
+}
+.setup p strong {
+  font-size: 16px;
+}
+.setup .columns {
+  margin-bottom: 48px;
+}
+.setup .columns .column {
+  display: flex;
+  justify-content: flex-start;
+}
+.setup .columns .column h3 {
+  align-self: center;
+  margin: 0 32px 0 16px;
+  margin-bottom: 0;
+}
+
+.cost {
+  border-bottom: 1px solid #DAE2E5;
+}
+.cost .columns {
+  padding: 0 32px;
+}
+.cost .columns .column {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #DAE2E5;
+}
+.cost .columns .column:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.cost .columns .column:first-child {
+  padding-top: 0;
+}
+.cost h2 span {
+  padding-bottom: 18px;
+}
+
+.features .features-list .column {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 16px;
+}
+.features .features-list .column.more {
+  font-weight: normal;
+}
+.features h2 span {
+  padding-bottom: 14px;
+}
+
+.image-break {
+  height: 220px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url(../img/bg-imagebreak.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.notifications {
+  background-color: #4ADEF2;
+  text-align: center;
+  padding: 32px 0 64px;
+  background: #4ADEF2 url(../img/pattern-left.svg) center 150px no-repeat;
+}
+.notifications .button {
+  margin-top: 12px;
+}
+
+footer {
+  background-color: #0A2E40;
+}
+footer a img {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .margins {
+    padding: 0;
+    width: 600px;
+  }
+
+  .hero {
+    padding: 24px 0 50px;
+  }
+
+  .preorder {
+    background-position: 0% center, 100% center;
+    padding: 50px 0;
+  }
+  .preorder .margins h3 {
+    margin: 24px 0 0;
+  }
+  .gsuite .carousel .carousel-slide {
+    background-image: linear-gradient(180deg, #E7EBEC 0%, #DFE4E5 60%, #ffffff 60.00001%, #ffffff 100%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    margin-top: 96px;
+  }
+
+  .margins {
+    padding: 0;
+    width: 960px;
+  }
+
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .columns.two .column {
+    width: 48%;
+  }
+  .columns.three .column {
+    width: 30%;
+  }
+  .columns.four .column {
+    width: 22%;
+  }
+
+  .preorder .margins.columns {
+    justify-content: center;
+  }
+  .preorder .margins.columns h3 {
+    text-align: left;
+    margin: 4px 0;
+  }
+  .preorder .margins.columns .column {
+    width: 300px;
+  }
+  .preorder .margins.columns .column .button {
+    width: auto;
+  }
+
+  .gsuite .carousel-toggle {
+    display: flex;
+  }
+  .gsuite .carousel {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%), url(../img/bg-carousel.jpg);
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 48px 0;
+  }
+  .gsuite .carousel.active-0 .carousel-slide {
+    transform: translateX(0%);
+  }
+  .gsuite .carousel.active-0 .carousel-slide.slide-0 {
+    opacity: 1;
+  }
+  .gsuite .carousel.active-1 .carousel-slide {
+    transform: translateX(-100%);
+  }
+  .gsuite .carousel.active-1 .carousel-slide.slide-1 {
+    opacity: 1;
+  }
+  .gsuite .carousel.active-2 .carousel-slide {
+    transform: translateX(-200%);
+  }
+  .gsuite .carousel.active-2 .carousel-slide.slide-2 {
+    opacity: 1;
+  }
+  .gsuite .carousel .carousel-slide {
+    background-color: transparent;
+    background-image: none;
+    opacity: 0;
+  }
+  .gsuite .carousel .carousel-slide .carousel-image {
+    pointer-events: none;
+  }
+  .gsuite .carousel .carousel-slide .carousel-image div {
+    width: 960px;
+    height: 500px;
+    background-image: url(../img/carousel-images.png);
+    background-size: 2880px 500px;
+  }
+  .gsuite .carousel .carousel-slide .carousel-caption {
+    display: none;
+  }
+
+  .setup .columns {
+    margin-bottom: 48px;
+  }
+  .setup .columns .column {
+    display: block;
+  }
+  .setup .columns .column h3 {
+    align-self: auto;
+    margin: 0 0 24px;
+  }
+
+  .cost {
+    border-bottom: 1px solid #DAE2E5;
+  }
+  .cost .columns {
+    padding: 0 16px;
+  }
+  .cost .columns .column {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .cost h2 span {
+    padding-bottom: 18px;
+  }
+
+  .features .features-list .column {
+    margin: 0 0 48px;
+  }
+  .features .features-list .column.more {
+    font-weight: normal;
+  }
+  .features h2 span {
+    padding-bottom: 14px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .margins {
+    padding: 0;
+    width: 1200px;
+  }
+
+  .gsuite .carousel .carousel-slide .carousel-image div {
+    width: 1200px;
+    height: 625px;
+    background-image: url(../img/carousel-images.png);
+    background-size: 3600px 625px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
